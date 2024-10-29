@@ -1,0 +1,106 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #d4dae3; /* Light, neutral background */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  color: #2d4059; /* Deep navy for a strong header */
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+/* Input Styles */
+input[type="text"] {
+  padding: 10px;
+  margin-right: 8px;
+  border-radius: 4px;
+  border: 1px solid #b4b9bd;
+  width: 220px;
+  font-size: 16px;
+  background-color: #e8f0fe; /* Light blue for input field */
+  color: #2d4059;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4178be; /* Bright blue on focus */
+}
+
+/* Button Styles */
+button {
+  padding: 10px 16px;
+  margin: 0 6px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  background-color: #6e84a4;
+}
+
+/* Unique Button Colors */
+button[onClick*="handleAddOrEditTask"] {
+  background-color: #17c3b2; /* Teal for Add/Edit button */
+}
+
+button[onClick*="handleAddOrEditTask"]:hover {
+  background-color: #13a09a;
+}
+
+button[onClick*="handleEditTask"] {
+  background-color: #f8961e; /* Vibrant orange for Edit button */
+}
+
+button[onClick*="handleEditTask"]:hover {
+  background-color: #d17d16;
+}
+
+button[onClick*="handleDeleteTask"] {
+  background-color: #e63946; /* Strong red for Delete button */
+}
+
+button[onClick*="handleDeleteTask"]:hover {
+  background-color: #c22c37;
+}
+
+button:active {
+  transform: scale(0.97); /* Slight shrink on click */
+}
+
+/* Task List and Item Styles */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  max-width: 350px;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f1faee; /* Light mint for tasks */
+  border-left: 5px solid #457b9d; /* Teal border for distinction */
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.task-list li:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  background-color: #d3e0ea; /* Slightly darker mint on hover */
+}
+
+/* Placeholder space styling */
+.task-list li + li {
+  margin-top: 10px;
+}
